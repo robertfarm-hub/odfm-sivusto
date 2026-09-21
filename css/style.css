@@ -1,0 +1,503 @@
+:root {
+    --vari-taivas: #BCC6D0;
+    --vari-tumma: #12161C;
+    --vari-teksti: #1A1A1A;
+    --vari-teksti-tumma: #E8E8E8;
+    --vari-pohja: #0C0F14;
+    --vari-keski: #5A6673;
+    --fontti-otsikko: "Archivo Black", Impact, sans-serif;
+    --fontti-teksti: "Inter", system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--fontti-teksti);
+    color: var(--vari-teksti);
+    line-height: 1.6;
+}
+
+h1,
+h2 {
+    font-family: var(--fontti-otsikko);
+    line-height: 1.2;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: inherit;
+}
+
+.vain-ruudunlukijalle {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+.ohita-linkki {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    padding: 0.4rem 1rem;
+    background: var(--vari-tumma);
+    color: var(--vari-teksti-tumma);
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.ohita-linkki:focus {
+    top: 1rem;
+    left: 1rem;
+}
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 8vh;
+    background: linear-gradient(to bottom,
+            var(--vari-taivas) 0%,
+            var(--vari-taivas) 45%,
+            var(--vari-tumma) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.30;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hero-otsikko {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    padding: 2rem 1rem 3rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.hero-yhtye {
+    display: block;
+    font-size: clamp(0.75rem, 1.5vw, 1rem);
+    letter-spacing: 0.4em;
+    margin-bottom: 0.75rem;
+    opacity: 0.7;
+}
+
+.hero-kappale {
+    display: block;
+    font-size: clamp(2.5rem, 9vw, 6rem);
+    letter-spacing: 0.15em;
+}
+
+.hero-sivu {
+    font-size: clamp(1.75rem, 6vw, 4rem);
+}
+
+.hero-kuva {
+    position: relative;
+    z-index: 2;
+    width: auto;
+    max-width: 100%;
+    max-height: 100vh;
+}
+
+.hero-nav {
+    position: absolute;
+    bottom: 2vh;
+    left: 50%;
+    transform: translateX(-50%) rotate(20deg);
+    z-index: 3;
+}
+
+.hero-nav img {
+    width: 90px;
+    height: auto;
+}
+
+.hero-nav a {
+    display: inline-block;
+}
+
+main {
+    background: var(--vari-tumma);
+    color: var(--vari-teksti-tumma);
+}
+
+.soitin {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+}
+
+.spotify-upotus {
+    width: 100%;
+    border: 0;
+    border-radius: 12px;
+}
+
+.tarina {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+}
+
+.tarina h2,
+.yhteys h2,
+.some h2 {
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0 0 1.5rem;
+}
+
+.tarina p {
+    margin: 0 0 1.25rem;
+    max-width: 60ch;
+}
+
+.yhteys {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 0;
+    text-align: center;
+}
+
+.sahkoposti {
+    margin: 0;
+    font-family: var(--fontti-otsikko);
+    font-size: clamp(1.1rem, 4vw, 1.75rem);
+    letter-spacing: 0.05em;
+}
+
+.sahkoposti a {
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.3em;
+}
+
+.some {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 5rem;
+    text-align: center;
+}
+
+.some-kolmio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem 3rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.some-karki {
+    flex-basis: 100%;
+}
+
+.some-kolmio a {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0rem;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+}
+
+.some-kolmio img {
+    width: 140px;
+    height: auto;
+}
+
+.sivunavigaatio {
+    background: var(--vari-pohja);
+    color: var(--vari-teksti-tumma);
+    border-top: 1px solid rgba(232, 232, 232, 0.15);
+}
+
+.sivunavigaatio ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 2rem 1.5rem;
+    list-style: none;
+}
+
+.sivunavigaatio a {
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.sivunavigaatio a:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.4em;
+}
+
+footer {
+    background: var(--vari-pohja);
+    color: var(--vari-teksti-tumma);
+    padding: 0 1.5rem 1.25rem;
+    text-align: center;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: rgba(232, 232, 232, 0.6);
+    position: relative;
+}
+
+.mysteeri {
+    position: absolute;
+    bottom: 0.25rem;
+    left: 56%;
+    transform: rotate(-8deg);
+    opacity: 0.3;
+    transition: opacity 0.4s;
+}
+
+.mysteeri img {
+    width: 70px;
+    height: auto;
+}
+
+.mysteeri:hover,
+.mysteeri:focus-visible {
+    opacity: 1;
+}
+
+.peli-sivu {
+    min-height: 100vh;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 5rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+}
+
+.peli {
+    position: relative;
+    width: min(90vw, 640px);
+    aspect-ratio: 4 / 1;
+    margin: 0 auto;
+    overflow: hidden;
+    background: url("../images/kentta-0.png") no-repeat center / cover;
+    image-rendering: pixelated;
+    touch-action: none;
+    --lattia: 9.4%;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.pelaaja {
+    position: absolute;
+    bottom: var(--lattia);
+    left: 50%;
+    width: 9.4%;
+    height: 75%;
+    transform: translateX(-50%);
+    background: url("../images/dante.png") no-repeat center bottom / contain;
+    image-rendering: pixelated;
+}
+
+.lattia {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: var(--lattia);
+    background: var(--vari-tumma);
+}
+
+.luukku {
+    position: absolute;
+    bottom: 0;
+    left: 88%;
+    width: 12%;
+    height: var(--lattia);
+    transform: translateX(-50%);
+    background: var(--vari-taivas);
+}
+
+.valo {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    pointer-events: none;
+    opacity: 0;
+    mix-blend-mode: multiply;
+    background: radial-gradient(circle var(--sade, 100px) at var(--lx, 50%) var(--ly, 50%),
+            #F0B060 0%,
+            #E0A055 12%,
+            #7A5E3A 26%,
+            #3A3228 42%,
+            #24222A 58%,
+            #16161C 74%,
+            #0A0A0C 100%);
+}
+
+.pimeys {
+    position: absolute;
+    inset: 0;
+    z-index: 6;
+    pointer-events: none;
+    opacity: 0;
+    background: radial-gradient(circle var(--sade, 100px) at var(--lx, 50%) var(--ly, 50%),
+            rgba(18, 22, 28, 0) 0%,
+            rgba(18, 22, 28, 0) 70%,
+            rgba(18, 22, 28, 0.7) 85%,
+            var(--vari-tumma) 100%);
+}
+
+body.peli-kaynnissa .pimeys,
+body.peli-kaynnissa .valo {
+    opacity: 1;
+}
+
+body.pelisivu {
+    background: var(--vari-taivas);
+}
+
+body:not(.peli-kaynnissa) .peli {
+    background-image: none !important;
+}
+
+body:not(.peli-kaynnissa) .lattia,
+body:not(.peli-kaynnissa) .luukku {
+    opacity: 0;
+}
+
+body.pelisivu.peli-kaynnissa {
+    background: var(--vari-tumma);
+}
+
+.maalilippu {
+    position: absolute;
+    left: 50%;
+    bottom: 28%;
+    width: 14%;
+    display: none;
+    opacity: 0.75;
+    transform: translateX(-50%) rotate(-7deg);
+    pointer-events: none;
+}
+
+.maalilippu img {
+    width: 100%;
+    height: auto;
+}
+
+.kerrosnimi,
+.kerrosnimi-valo {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 38%;
+    text-align: center;
+    font-family: var(--fontti-otsikko);
+    font-size: clamp(1.1rem, 4.5vw, 3rem);
+    letter-spacing: 0.4em;
+    text-indent: 0.4em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.kerrosnimi {
+    color: rgba(240, 190, 120, 0.85);
+    text-shadow: 0 0 22px rgba(232, 162, 74, 0.8), 0 0 45px rgba(232, 162, 74, 0.5);
+}
+
+.kerrosnimi-valo {
+    z-index: 7;
+}
+
+.kerrosnimi-valo span {
+    color: rgba(240, 190, 120, 0);
+    transition: color 2.2s, text-shadow 2.2s;
+}
+
+.kerrosnimi-valo span.nimi-loytyi {
+    color: rgba(255, 215, 160, 0.95);
+    text-shadow: 0 0 22px rgba(232, 162, 74, 0.85), 0 0 50px rgba(232, 162, 74, 0.55);
+}
+
+.aani {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 60;
+    width: 2.9rem;
+    height: 2.9rem;
+    padding: 0.6rem;
+    border: 1px solid rgba(232, 232, 232, 0.25);
+    border-radius: 50%;
+    background: rgba(18, 22, 28, 0.55);
+    color: var(--vari-teksti-tumma);
+    opacity: 0.8;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.aani:hover,
+.aani:focus-visible {
+    opacity: 0.9;
+}
+
+.aani svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    fill-rule: evenodd;
+}
+
+.aani .aani-aallot {
+    fill: none;
+}
+
+.aani .aani-viiva {
+    display: none;
+}
+
+.aani.vaimennettu .aani-aallot {
+    display: none;
+}
+
+.aani.vaimennettu .aani-viiva {
+    display: block;
+}
