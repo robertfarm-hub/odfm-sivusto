@@ -310,7 +310,7 @@ footer {
     aspect-ratio: 4 / 1;
     margin: 0 auto;
     overflow: hidden;
-    background: url("../images/kentta-0.png") no-repeat center / cover;
+    background: url("../images/kentta-0.webp") no-repeat center / cover;
     image-rendering: pixelated;
     touch-action: none;
     --lattia: 9.4%;
@@ -326,7 +326,7 @@ footer {
     width: 9.4%;
     height: 75%;
     transform: translateX(-50%);
-    background: url("../images/dante.png") no-repeat center bottom / contain;
+    background: url("../images/dante.webp") no-repeat center bottom / contain;
     image-rendering: pixelated;
 }
 

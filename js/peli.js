@@ -20,16 +20,16 @@ const LYHTY_Y = 0.533;
 const MAALI_OSOITE = "../index.html";
 
 const KENTAT = [
-    { kuva: "kentta-0.png", luukku: 80, lattia: 10.6 },
-    { kuva: "kentta-1.png", luukku: 12, lattia: 18.8, nimi: "Limbo" },
-    { kuva: "kentta-2.png", luukku: 88, lattia: 14.4, nimi: "Lussuria" },
-    { kuva: "kentta-3.png", luukku: 12, lattia: 11.9, nimi: "Gola" },
-    { kuva: "kentta-4.png", luukku: 88, lattia: 22.5, nimi: "Avarizia" },
-    { kuva: "kentta-5.png", luukku: 12, lattia: 13.1, nimi: "Ira" },
-    { kuva: "kentta-6.png", luukku: 88, lattia: 11.9, nimi: "Eresia" },
-    { kuva: "kentta-7.png", luukku: 12, lattia: 11.9, nimi: "Violenza" },
-    { kuva: "kentta-8.png", luukku: 88, lattia: 9.4, karkaa: 12, nimi: "Malebolge" },
-    { kuva: "kentta-9.png", luukku: null, lattia: 11.9, valoLevenee: true, lippu: true, nimi: "Cocito" }
+    { kuva: "kentta-0.webp", luukku: 80, lattia: 10.6 },
+    { kuva: "kentta-1.webp", luukku: 12, lattia: 18.8, nimi: "Limbo" },
+    { kuva: "kentta-2.webp", luukku: 88, lattia: 14.4, nimi: "Lussuria" },
+    { kuva: "kentta-3.webp", luukku: 12, lattia: 11.9, nimi: "Gola" },
+    { kuva: "kentta-4.webp", luukku: 88, lattia: 22.5, nimi: "Avarizia" },
+    { kuva: "kentta-5.webp", luukku: 12, lattia: 13.1, nimi: "Ira" },
+    { kuva: "kentta-6.webp", luukku: 88, lattia: 11.9, nimi: "Eresia" },
+    { kuva: "kentta-7.webp", luukku: 12, lattia: 11.9, nimi: "Violenza" },
+    { kuva: "kentta-8.webp", luukku: 88, lattia: 9.4, karkaa: 12, nimi: "Malebolge" },
+    { kuva: "kentta-9.webp", luukku: null, lattia: 11.9, valoLevenee: true, lippu: true, nimi: "Cocito" }
 ];
 
 let kerros = 0;
@@ -49,7 +49,7 @@ let maalissa = false;
 let kirjaimet = [];
 
 function vaihdaKuva(nimi) {
-    pelaaja.style.backgroundImage = 'url("../images/' + nimi + '.png")';
+    pelaaja.style.backgroundImage = 'url("../images/' + nimi + '.webp")';
 }
 
 const AANENVOIMAKKUUS = 0.25;
@@ -139,7 +139,7 @@ function esilataa() {
 
     for (const nimi of kuvat) {
         const kuva = new Image();
-        kuva.src = "../images/" + nimi + ".png";
+        kuva.src = "../images/" + nimi + ".webp";
     }
 
     for (const tiedot of KENTAT) {
