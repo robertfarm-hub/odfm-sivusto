@@ -1,7 +1,5 @@
 # ODFM-SIVUSTO
 
-Tehdään kertausharjoitusten lopussa olevaan tehtävään sivusto, jonka julkaisen tulevan kappaleen yhteydessä. Jatkettiin itsenäisesti omana projektina.
-
 Sivusto julkaistaan osoitteessa https://odfm.fi GitHub Pagesin kautta.
 
 Kommentit osoittavat kohdat joihin tulee kiinnittää huomiota myöhemmin.
