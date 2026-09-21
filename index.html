@@ -1,34 +1,83 @@
 <!DOCTYPE html>
 <html lang="fi">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex">
-<title>ODFM</title>
-<style>
-  html, body {
-    margin: 0;
-    height: 100%;
-    background: #12161C;
-  }
-  body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    color: #BCC6D0;
-    font-family: sans-serif;
-    text-align: center;
-  }
-  a {
-    color: #BCC6D0;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>ODFM</title>
+  <link rel="icon" href="images/odfm-favicon.png" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="images/odfm-favicon-dark.png" media="(prefers-color-scheme: dark)">
+  <style>
+    html,
+    body {
+      margin: 0;
+      height: 100%;
+    }
+
+    html {
+      background: #12161C;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      color: #BCC6D0;
+      font-family: sans-serif;
+      text-align: center;
+    }
+
+    a {
+      color: #BCC6D0;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    h1 a {
+      text-decoration: none;
+    }
+
+    .logo {
+      display: block;
+      width: 100%;
+      max-width: 280px;
+      height: auto;
+    }
+
+    @media (max-width: 480px) {
+      .logo {
+        max-width: 180px;
+      }
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("images/tausta.webp");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      filter: blur(20px) brightness(0.5);
+      transform: scale(1.1);
+      z-index: -1;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>ODFM</h1>
-  <p>Dante 9.10.2026</p>
-  <p><a href="https://www.instagram.com/odfm.fi/">@odfm.fi</a></p>
+  <h1><a href="https://www.instagram.com/odfm.fi/"><img src="images/logo.webp" alt="ODFM Instagramissa" class="logo"
+        width="560" height="560"></a></h1>
+  <p>TULOSSA PIAN</p>
+  <p><a href="mailto:contact@odfm.fi">contact@odfm.fi</a></p>
 </body>
+
 </html>
