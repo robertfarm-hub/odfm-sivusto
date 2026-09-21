@@ -107,12 +107,14 @@ a {
     letter-spacing: 0.4em;
     margin-bottom: 0.75rem;
     opacity: 0.7;
+    text-shadow: 0 0 4px rgba(188, 198, 208, 0.4);
 }
 
 .hero-kappale {
     display: block;
     font-size: clamp(2.5rem, 9vw, 6rem);
     letter-spacing: 0.15em;
+    text-shadow: 0 0 6px rgba(188, 198, 208, 0.35);
 }
 
 .hero-sivu {
@@ -125,6 +127,16 @@ a {
     width: auto;
     max-width: 100%;
     max-height: 100vh;
+}
+
+body.sivu-yhteystiedot .hero {
+    min-height: 70vh;
+    min-height: 70svh;
+}
+
+body.sivu-yhteystiedot .hero-kuva {
+    max-height: 70vh;
+    max-height: 70svh;
 }
 
 .hero-nav {
@@ -299,14 +311,41 @@ footer {
     margin: 0 auto;
     padding: 5rem 1.5rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 0.75rem;
     background: none;
+}
+
+.peli-kaanna {
+    display: none;
+    margin: 0;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    color: var(--vari-keski);
+    text-align: center;
+}
+
+.peli-ohje {
+    margin: 0;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    color: rgba(18, 22, 28, 0.5);
+    text-align: center;
+}
+
+.peli-ohje-nappaimet {
+    display: none;
+}
+
+body.peli-kaynnissa .peli-ohje {
+    display: none;
 }
 
 .peli {
     position: relative;
-    width: min(90vw, 640px);
+    width: round(down, min(90vw, 640px), 4px);
     aspect-ratio: 4 / 1;
     margin: 0 auto;
     overflow: hidden;
@@ -500,4 +539,59 @@ body.pelisivu.peli-kaynnissa {
 
 .aani.vaimennettu .aani-viiva {
     display: block;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .peli-ohje-nappaimet {
+        display: inline;
+    }
+}
+
+@media (max-width: 640px) {
+    body.sivu-yhteystiedot .hero {
+        min-height: 60vh;
+        min-height: 60svh;
+    }
+
+    body.sivu-yhteystiedot .hero-kuva {
+        max-height: 60vh;
+        max-height: 60svh;
+    }
+
+    .soitin {
+        padding-top: 36px;
+    }
+}
+
+@media (max-width: 380px) {
+    .some-kolmio img {
+        width: 128px;
+    }
+
+    .some-kolmio {
+        gap: 1rem 28px;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 640px) {
+    .peli-kaanna {
+        display: block;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+    .peli {
+        width: round(down, min(96vw, 384vh), 4px);
+        width: round(down, min(96vw, 384svh), 4px);
+    }
+}
+
+@media (hover: none) {
+    .mysteeri {
+        opacity: 0.42;
+    }
+
+    .mysteeri img {
+        width: 82px;
+    }
 }
