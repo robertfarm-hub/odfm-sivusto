@@ -292,7 +292,7 @@ footer {
     left: 56%;
     transform: rotate(-8deg);
     opacity: 0.3;
-    transition: opacity 0.4s;
+    transition: opacity 0.5s, transform 0.5s, translate 0.5s, scale 0.5s;
 }
 
 .mysteeri img {
@@ -303,6 +303,9 @@ footer {
 .mysteeri:hover,
 .mysteeri:focus-visible {
     opacity: 1;
+    transform: rotate(-3deg);
+    translate: 0 -2px;
+    scale: 1.05;
 }
 
 .peli-sivu {
