@@ -193,6 +193,27 @@ main {
     max-width: 60ch;
 }
 
+.julkaisija {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1.5rem 5rem;
+}
+
+.julkaisija-otsikko {
+    margin: 0;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(232, 232, 232, 0.6);
+}
+
+.julkaisija-logo {
+    width: 80px;
+    filter: drop-shadow(0 0 6px rgba(188, 198, 208, 0.35));
+}
+
 .yhteys {
     max-width: 700px;
     margin: 0 auto;
