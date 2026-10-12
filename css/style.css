@@ -187,6 +187,27 @@ main {
     border-radius: 12px;
 }
 
+.palvelut {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1.5rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.palvelut img {
+    width: 28px;
+    opacity: 0.7;
+    transition: opacity 0.3s, scale 0.3s;
+}
+
+.palvelut a:hover img,
+.palvelut a:focus-visible img {
+    opacity: 1;
+    scale: 1.1;
+}
+
 .tarina {
     max-width: 700px;
     margin: 0 auto;
