@@ -217,6 +217,14 @@ main {
     width: 85px;
     opacity: 0.9;
     filter: drop-shadow(0 0 6px rgba(188, 198, 208, 0.35));
+    transition: scale 0.4s, opacity 0.4s, filter 0.4s;
+}
+
+.julkaisija a:hover .julkaisija-logo,
+.julkaisija a:focus-visible .julkaisija-logo {
+    scale: 1.08;
+    opacity: 1;
+    filter: drop-shadow(0 0 12px rgba(188, 198, 208, 0.4));
 }
 
 .yhteys {
