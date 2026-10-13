@@ -1,16 +1,16 @@
 # ODFM-SIVUSTO
 
-Sivusto julkaistaan osoitteessa https://odfm.fi GitHub Pagesin kautta.
-
-Kommentit osoittavat kohdat joihin tulee kiinnittää huomiota myöhemmin.
+Sivusto on julkaistu osoitteessa [https://odfm.fi](https://odfm.fi) GitHub Pagesin kautta (lähdehaara `main`).
 
 # Haarat
 
-`main` sisältää varsinaisen sivuston, `tulossa` väliaikaisen sivun. Julkaisu tehdään vaihtamalla GitHub Pagesin lähdehaaraksi `main`.
+`main` sisältää julkaistun sivuston. `tulossa` on vanha "tulossa pian" -väliaikaissivu, jota käytettiin ennen varsinaista julkaisua — se ei ole ajan tasalla eikä sitä enää päivitetä.
 
 # Kansiorakenne
 
+```
 odfm-sivusto/
+├── CNAME
 ├── index.html
 ├── readme.md
 ├── pages/
@@ -30,6 +30,9 @@ odfm-sivusto/
     ├── dante-lyhty-b.webp
     ├── dante-lyhty-putoaa.webp
     ├── fm-ig.webp
+    ├── ikoni-apple-music.svg
+    ├── ikoni-tidal.svg
+    ├── ikoni-youtube.svg
     ├── kentta-0.webp … kentta-9.webp
     ├── lippu.webp
     ├── muistilappu.webp
@@ -40,7 +43,9 @@ odfm-sivusto/
     ├── odfm-ig.webp
     ├── odfm-og.jpg
     ├── patsas.webp
-    └── patsas2.webp
+    ├── patsas2.webp
+    └── tiddyb-logo.webp
+```
 
 `tyotiedostot/`-kansio sisältää lähdetiedostoja eikä ole repossa (.gitignore).
 
