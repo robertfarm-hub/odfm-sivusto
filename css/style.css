@@ -332,12 +332,11 @@ main {
 
 footer {
     background: var(--vari-pohja);
-    color: var(--vari-teksti-tumma);
     padding: 0 1.5rem 1.25rem;
     text-align: center;
     font-size: 0.75rem;
     letter-spacing: 0.1em;
-    color: rgba(232, 232, 232, 0.6);
+    color: rgba(232, 232, 232, 0.8);
     position: relative;
 }
 
@@ -381,7 +380,7 @@ footer {
     margin: 0;
     font-size: 0.8rem;
     letter-spacing: 0.05em;
-    color: var(--vari-keski);
+    color: rgba(18, 22, 28, 0.82);
     text-align: center;
 }
 
@@ -389,7 +388,7 @@ footer {
     margin: 0;
     font-size: 0.8rem;
     letter-spacing: 0.05em;
-    color: rgba(18, 22, 28, 0.5);
+    color: rgba(18, 22, 28, 0.82);
     text-align: center;
 }
 
