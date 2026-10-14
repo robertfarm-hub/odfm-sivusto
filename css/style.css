@@ -113,6 +113,21 @@ a {
     padding: 2rem 1rem 3rem;
     text-align: center;
     text-transform: uppercase;
+    color: var(--vari-teksti-tumma);
+}
+
+.hero-otsikko::before {
+    content: "";
+    position: absolute;
+    inset: -4rem -26rem;
+    z-index: -1;
+    pointer-events: none;
+    background: radial-gradient(closest-side,
+            var(--vari-tumma) 25%,
+            rgba(18, 22, 28, 0.8) 45%,
+            rgba(18, 22, 28, 0.45) 65%,
+            rgba(18, 22, 28, 0.15) 85%,
+            transparent 100%);
 }
 
 .hero-yhtye {
@@ -120,15 +135,12 @@ a {
     font-size: clamp(0.75rem, 1.5vw, 1rem);
     letter-spacing: 0.4em;
     margin-bottom: 0.75rem;
-    opacity: 0.7;
-    text-shadow: 0 0 4px rgba(188, 198, 208, 0.4);
 }
 
 .hero-kappale {
     display: block;
     font-size: clamp(2.5rem, 9vw, 6rem);
     letter-spacing: 0.15em;
-    text-shadow: 0 0 6px rgba(188, 198, 208, 0.35);
 }
 
 .hero-sivu {
